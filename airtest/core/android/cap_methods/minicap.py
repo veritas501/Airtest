@@ -136,7 +136,7 @@ class Minicap(BaseCap):
         device_dir = "/data/local/tmp"
 
         path = os.path.join(STFLIB, abi, binfile)
-        self.adb.push(path, "%s/minicap" % device_dir)
+        self.adb.push(path, device_dir)
         self.adb.shell("chmod 755 %s/minicap" % device_dir)
 
         pattern = os.path.join(STFLIB, 'minicap-shared/aosp/libs/android-%s/%s/minicap.so')
